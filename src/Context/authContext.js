@@ -25,11 +25,11 @@ export function AuthProvider({ children }) {
     const loginGoogleAuth = () => {
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider);
-    }
+    };
     const restPassword = (email) => {
         sendPasswordResetEmail(auth, email)
 
-    }
+    };
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
